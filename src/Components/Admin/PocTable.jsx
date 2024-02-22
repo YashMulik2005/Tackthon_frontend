@@ -56,7 +56,7 @@ function PocTable() {
     setLoading(true);
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/admin/getPocAdmin",
+        "https://backend-tc-24.vercel.app/api/admin/getPocAdmin",
         {
           page: page,
           rows: rowsPerPage,
@@ -83,7 +83,7 @@ function PocTable() {
     );
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/admin/addPoc",
+        "https://backend-tc-24.vercel.app/api/admin/addPoc",
         {
           email: email,
           mobileNo: mobileNo,
@@ -111,7 +111,7 @@ function PocTable() {
     setLoading(true);
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/admin/searchPoc`,
+        `https://backend-tc-24.vercel.app/api/admin/searchPoc`,
         {
           params: { search },
         }
@@ -138,7 +138,7 @@ function PocTable() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/admin/deletePOC",
+        "https://backend-tc-24.vercel.app/api/admin/deletePOC",
         {
           poc_id: deletePoc.id,
           userType: "admin",
@@ -184,7 +184,7 @@ function PocTable() {
 
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/admin/editPoc",
+        "https://backend-tc-24.vercel.app/api/admin/editPoc",
         {
           id: editPoc.id,
           email: email,
@@ -212,7 +212,7 @@ function PocTable() {
   const getAllColleges = async () => {
     try {
       const result = await axios.get(
-        "http://localhost:8000/api/college/getAllColleges"
+        "https://backend-tc-24.vercel.app/api/college/getAllColleges"
       );
       console.log(result.data.data);
       setCollegeList(result.data.data.data);
@@ -254,11 +254,11 @@ function PocTable() {
       <div className=" mt-5 rounded">
         <Paper sx={{ width: "100%" }}>
           <TableContainer sx={{
-              maxWidth: "100%",
-              maxHeight: "500px",
-              overflowX: "auto",
-              overflowY: "auto",
-            }}>
+            maxWidth: "100%",
+            maxHeight: "500px",
+            overflowX: "auto",
+            overflowY: "auto",
+          }}>
             <Table stickyHeader>
               <TableHead>
                 <TableRow>

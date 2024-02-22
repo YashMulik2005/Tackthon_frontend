@@ -16,7 +16,7 @@ function ProjectCard2({ data }) {
   //console.log(data.allocated_college);
   const getcollege = async () => {
     const col = await axios.post(
-      "http://localhost:8000/api/college/onecollge",
+      "https://backend-tc-24.vercel.app/api/college/onecollge",
       { college: data.allocated_college }
     );
     // console.log(col.data.data);

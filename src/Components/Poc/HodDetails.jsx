@@ -56,7 +56,7 @@ function HodDetails() {
     setLoading(true);
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/poc/getAllHodPoc",
+        "https://backend-tc-24.vercel.app/api/poc/getAllHodPoc",
         {
           page: page,
           rows: rowsPerPage,
@@ -80,7 +80,7 @@ function HodDetails() {
     );
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/poc/addHOD",
+        "https://backend-tc-24.vercel.app/api/poc/addHOD",
         {
           email: email,
           mobileNo: mobileNo,
@@ -109,7 +109,7 @@ function HodDetails() {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/poc/searchHod`,
+        `https://backend-tc-24.vercel.app/api/poc/searchHod`,
         {
           search: search,
           allocated_college: userDetails.College,
@@ -137,7 +137,7 @@ function HodDetails() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/poc/delete_HOD",
+        "https://backend-tc-24.vercel.app/api/poc/delete_HOD",
         {
           hod_id: deleteHod.id,
           userType: "poc",
@@ -179,7 +179,7 @@ function HodDetails() {
 
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/poc/editHodPoc",
+        "https://backend-tc-24.vercel.app/api/poc/editHodPoc",
         {
           id: editHod.id,
           email: email,
@@ -206,7 +206,7 @@ function HodDetails() {
   const getAllDptAddHod = async () => {
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/dpt/getAllDptAddHod",
+        "https://backend-tc-24.vercel.app/api/dpt/getAllDptAddHod",
         {
           college: userDetails.College,
         }

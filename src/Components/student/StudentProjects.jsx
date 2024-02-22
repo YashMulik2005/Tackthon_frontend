@@ -43,7 +43,7 @@ function StudentProjects() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/project/addProjectByStudent",
+        "https://backend-tc-24.vercel.app/api/project/addProjectByStudent",
         {
           title: title,
           description: description,
@@ -73,7 +73,7 @@ function StudentProjects() {
     console.log(userDetails.allocated_college, "js");
     try {
       const result = await axios.get(
-        "http://localhost:8000/api/auth/getAllProjects"
+        "https://backend-tc-24.vercel.app/api/auth/getAllProjects"
       );
       setProjectList(result.data.data.data);
       console.log(result.data);
@@ -85,7 +85,7 @@ function StudentProjects() {
   const handleSearch = async (e) => {
     e.preventDefault();
     const res = await axios.post(
-      "http://localhost:8000/api/project/searchStudentsProj",
+      "https://backend-tc-24.vercel.app/api/project/searchStudentsProj",
       { title: search }
     );
     console.log(res.data.data.projects);

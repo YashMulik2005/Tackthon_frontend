@@ -105,7 +105,7 @@ function ProjectDetails() {
     console.log(userDetails);
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/hod/getProjects",
+        "https://backend-tc-24.vercel.app/api/hod/getProjects",
         {
           allocated_college: userDetails.allocated_college,
           allocated_department: userDetails.allocated_department,
@@ -124,7 +124,7 @@ function ProjectDetails() {
     const timestamp = new Date();
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/hod/addProject",
+        "https://backend-tc-24.vercel.app/api/hod/addProject",
         {
           title: title,
           description: description,
@@ -162,7 +162,7 @@ function ProjectDetails() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/hod/deleteProject",
+        "https://backend-tc-24.vercel.app/api/hod/deleteProject",
         {
           project_id: deleteProject.id,
         },
@@ -196,7 +196,7 @@ function ProjectDetails() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/hod/editProject",
+        "https://backend-tc-24.vercel.app/api/hod/editProject",
         {
           id: editProject._id,
           title: title,
@@ -231,7 +231,7 @@ function ProjectDetails() {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/hod/searchProject?search=${search}`,
+        `https://backend-tc-24.vercel.app/api/hod/searchProject?search=${search}`,
         {
           allocated_department: userDetails.allocated_department,
         }
@@ -251,7 +251,7 @@ function ProjectDetails() {
       console.log(id, s, "54545458458");
       setLoading(true);
       const { data } = await axios.post(
-        "http://localhost:8000/api/hod/handleStatus",
+        "https://backend-tc-24.vercel.app/api/hod/handleStatus",
         {
           project_id: id,
           active: s,

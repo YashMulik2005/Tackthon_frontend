@@ -20,7 +20,7 @@ function Dashboard() {
   const getTotalCount = async () => {
     try {
       const result = await axios.get(
-        "http://localhost:8000/api/admin/getTotalCount"
+        "https://backend-tc-24.vercel.app/api/admin/getTotalCount"
       );
       console.log(result.data.totalCountCollege);
       setData(result.data);
@@ -32,7 +32,7 @@ function Dashboard() {
   const getcollege = async () => {
     try {
       const result = await axios.get(
-        "http://localhost:8000/api/admin/getcolleges"
+        "https://backend-tc-24.vercel.app/api/admin/getcolleges"
       );
       console.log(result.data.data, "ddd");
       setclg(result.data.data);
@@ -44,12 +44,12 @@ function Dashboard() {
     console.log(selectedCollegeId);
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/college/getcount",
+        "https://backend-tc-24.vercel.app/api/college/getcount",
         { college_id: id }
       );
       console.log(data.totalCountHod);
       setbdata(data);
-    } catch (error) {}
+    } catch (error) { }
   };
   const handleCollegeSelect = (selectedOption) => {
     setSelectedCollegeId(selectedOption.value);

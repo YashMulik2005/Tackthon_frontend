@@ -14,7 +14,7 @@ function OneProject() {
 
   const getProjectdata = async () => {
     const res = await axios.post(
-      "http://localhost:8000/api/project/getoneproject",
+      "https://backend-tc-24.vercel.app/api/project/getoneproject",
       { project_id: id }
     );
     console.log(res?.data?.data?.data[0]);
@@ -23,7 +23,7 @@ function OneProject() {
   };
   const save = async () => {
     const { data } = await axios.post(
-      "http://localhost:8000/api/save/add",
+      "https://backend-tc-24.vercel.app/api/save/add",
       {
         project_id: id,
         user_id: userDetails._id,

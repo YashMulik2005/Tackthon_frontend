@@ -9,7 +9,7 @@ function ProjectCard({ data }) {
     const [college_name, setcollege_name] = useState("")
     //console.log(data.allocated_college);
     const getcollege = async () => {
-        const col = await axios.post("http://localhost:8000/api/college/onecollge", { college: data.allocated_college });
+        const col = await axios.post("https://backend-tc-24.vercel.app/api/college/onecollge", { college: data.allocated_college });
         // console.log(col.data.data);
         setcollege_name(col.data.data);
     }

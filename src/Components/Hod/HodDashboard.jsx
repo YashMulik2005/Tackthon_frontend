@@ -16,7 +16,7 @@ function HodDashboard() {
   const getAllCounts = async () => {
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/hod/hodDashboardDetails",
+        "https://backend-tc-24.vercel.app/api/hod/hodDashboardDetails",
         {
           department_id: userDetails.allocated_department,
           college_id: userDetails.allocated_college,

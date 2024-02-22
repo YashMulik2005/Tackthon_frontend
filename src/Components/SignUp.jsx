@@ -41,7 +41,7 @@ function SignUp() {
       return;
     }
     try {
-      const result = await axios.post("http://localhost:8000/api/auth/signup", {
+      const result = await axios.post("https://backend-tc-24.vercel.app/api/auth/signup", {
         username: userName,
         password: password,
         fullName: fullName,
@@ -71,7 +71,7 @@ function SignUp() {
   const getAllColleges = async () => {
     try {
       const result = await axios.get(
-        "http://localhost:8000/api/college/getAllColleges"
+        "https://backend-tc-24.vercel.app/api/college/getAllColleges"
       );
       console.log(result.data.data);
       setCollegeList(result.data.data.data);
@@ -83,7 +83,7 @@ function SignUp() {
     console.log(id, "helo");
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/auth/getDepartment",
+        "https://backend-tc-24.vercel.app/api/auth/getDepartment",
         {
           college_id: id,
         }
@@ -101,35 +101,37 @@ function SignUp() {
 
   return (
     <div className="  h-screen flex justify-center items-center bg-blue-50 overflow-y-auto">
-      <div className="flex flex-row fixed  bg-[#fcfcfe] shadow-xl rounded-md  max-md:w-[90%] justify-center items-center w-max h-max py-4 ">
+      <div className="flex flex-row fixed  bg-[#fcfcfe] shadow-xl rounded-md  max-md:w-[90%] justify-center items-center w-max h-max py-4 px-5">
         <div className="max-md:hidden w-[40%]">
           <img className="h-max w-[500px] " src={signUpImage} />
         </div>
-        <div className="flex flex-col px-4 w-[100%] sm:w-[60%]   overflow-y-auto h-[85vh]">
+        <div className="flex flex-col px-4 w-[100%] sm:w-[60%] my-auto overflow-y-auto h-[85vh]">
           <h1 className="font-semibold text-black text-xl underline underline-offset-4 text-center">
             Student Registration
           </h1>
-          <form className="flex flex-col w-[full]" onSubmit={handleOnSubmit}>
+          <form className="flex flex-col w-[full] py-3" onSubmit={handleOnSubmit}>
             <div className="flex flex-col gap-4">
-              <div className="flex flex-col">
-                <label className="mt-2">Full Name</label>
-                <input
-                  type="text"
-                  className="border border-gray-300 rounded-md px-2 py-1 focus:outline-none placeholder:text-sm placeholder:text-gray-400"
-                  placeholder="Enter Your Full Name"
-                  onChange={(e) => setFullName(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="flex flex-col">
-                <label className="">Mobile No.</label>
-                <input
-                  type="telephone"
-                  className="border border-gray-300 rounded-md px-2 py-1  focus:outline-none placeholder:text-sm placeholder:text-gray-400"
-                  placeholder="Enter Your Mobile No."
-                  onChange={(e) => setMobile(e.target.value)}
-                  required
-                />
+              <div className=" flex items-center justify-center gap-2">
+                <div className="flex flex-col w-[50%]">
+                  <label className="mt-2">Full Name</label>
+                  <input
+                    type="text"
+                    className="border border-gray-300 rounded-md px-2 py-1 focus:outline-none placeholder:text-sm placeholder:text-gray-400"
+                    placeholder="Enter Your Full Name"
+                    onChange={(e) => setFullName(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="flex flex-col w-[50%] ">
+                  <label className=" mt-2">Mobile No.</label>
+                  <input
+                    type="telephone"
+                    className="border border-gray-300 rounded-md px-2 py-1  focus:outline-none placeholder:text-sm placeholder:text-gray-400"
+                    placeholder="Enter Your Mobile No."
+                    onChange={(e) => setMobile(e.target.value)}
+                    required
+                  />
+                </div>
               </div>
             </div>
             <div>
@@ -204,21 +206,21 @@ function SignUp() {
                 />
               </div>
               <div className="flex flex-col relative">
-                <label className="mt-5">Password</label>
+                <label className="mt-2">Password</label>
                 <input
-                  type={eye ? "text" : "password"}
+                  type={"password"}
                   className="border border-gray-300 rounded-md px-2 py-1 focus:outline-none placeholder:text-sm placeholder:text-gray-400"
                   placeholder="Enter Your Password"
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
-                <div className="absolute top-7 right-0 mt-6 mr-4">
+                {/* <div className="absolute top-7 right-0 mt-6 mr-4">
                   {!eye ? (
                     <FaEye size={20} onClick={() => setEye(true)} />
                   ) : (
                     <FaEyeSlash size={20} onClick={() => setEye(false)} />
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
             {/* <button

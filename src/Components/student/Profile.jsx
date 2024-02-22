@@ -16,7 +16,7 @@ function Profile() {
   const getuserproject = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/auth/getuprojects",
+        "https://backend-tc-24.vercel.app/api/auth/getuprojects",
         {
           user: userDetails._id,
         }

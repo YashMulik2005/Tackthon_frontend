@@ -11,7 +11,7 @@ function College() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:8000/api/college/serach", {
+    const res = await axios.post("https://backend-tc-24.vercel.app/api/college/serach", {
       title: search,
     });
     //console.log(res);
@@ -20,7 +20,7 @@ function College() {
 
   const getdata = async () => {
     const res = await axios.get(
-      "http://localhost:8000/api/college/getAllColleges"
+      "https://backend-tc-24.vercel.app/api/college/getAllColleges"
     );
     console.log(res.data.data.data);
     setcollegeData(res.data.data.data);

@@ -1,17 +1,17 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Navbar'
 import themeHook from '../Context'
 import { Outlet } from 'react-router-dom'
 import HodSidebar from './HodSidebar'
 import { useNavigate } from 'react-router-dom'
 function HodHome() {
-    const { sidebarvalue,userDetails } = themeHook()
+    const { sidebarvalue, userDetails } = themeHook()
     const navigate = useNavigate()
-    useEffect(()=>{
-        if(userDetails?.userType !== "HOD"){
-          navigate("/")
+    useEffect(() => {
+        if (userDetails?.userType !== "HOD") {
+            navigate("/")
         }
-      },[userDetails])
+    }, [userDetails])
     return (
         <div className='bg-[#f5f5f5] w-full max-h-screen'>
             <Navbar />

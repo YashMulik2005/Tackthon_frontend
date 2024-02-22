@@ -19,7 +19,7 @@ function CollegeInfo() {
     setLoading(true);
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/poc/getOneCollege",
+        "https://backend-tc-24.vercel.app/api/poc/getOneCollege",
         {
           college_id: userDetails.College,
         }
@@ -55,7 +55,7 @@ function CollegeInfo() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/poc/editCollegeInfo",
+        "https://backend-tc-24.vercel.app/api/poc/editCollegeInfo",
         {
           id: college._id,
           name: collegeName,

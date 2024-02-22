@@ -4,15 +4,16 @@ import { FaUserCircle } from "react-icons/fa";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { PiStudentBold } from "react-icons/pi";
+import { FaProjectDiagram } from "react-icons/fa";
+
 function Navbar() {
   const { userDetails } = themeHook();
   const navigate = useNavigate();
   return (
     <div className="flex flex-row  bg-white px-5 py-3 justify-between items-center border-b-2 border-gray-300 sticky top-0">
-      <div className="flex justify-center items-center text-green-700 gap-2">
-        <PiStudentBold size={28} />
-        <h1 className="text-xl font-semibold text-black cursor-pointer" ><Link to={"/"}>PolyConnectHub</Link></h1>
+      <div className="flex justify-center items-end text-green-800 ">
+        <FaProjectDiagram size={40} />
+        <h1 className="text-lg font-bold text-green-600 cursor-pointer" ><Link to={"/"}><i>PolyConnectHub</i></Link></h1>
       </div>
       {userDetails === null ? (
         <div className="flex flex-row items-center gap-2">

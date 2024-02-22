@@ -17,7 +17,7 @@ function MainContent() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/project/getallprojects"
+          "https://backend-tc-24.vercel.app/api/project/getallprojects"
         );
         setProjectData(res.data.data.data);
       } catch (error) {
@@ -30,7 +30,7 @@ function MainContent() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/api/project/search", {
+      const res = await axios.post("https://backend-tc-24.vercel.app/api/project/search", {
         title: search,
       });
       setProjectData(res.data.data.projects);

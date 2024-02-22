@@ -53,7 +53,7 @@ function CollegesTable() {
     setLoading(true);
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/admin/getAllCollegesAdmin",
+        "https://backend-tc-24.vercel.app/api/admin/getAllCollegesAdmin",
         {
           page: page,
           rows: rowsPerPage,
@@ -72,7 +72,7 @@ function CollegesTable() {
     console.log("College Details", collegeName, about, address, token);
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/admin/addCollege",
+        "https://backend-tc-24.vercel.app/api/admin/addCollege",
         {
           name: collegeName,
           about: about,
@@ -99,7 +99,7 @@ function CollegesTable() {
     setLoading(true);
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/admin/searchCollege`,
+        `https://backend-tc-24.vercel.app/api/admin/searchCollege`,
         {
           params: { search },
         }
@@ -125,7 +125,7 @@ function CollegesTable() {
     console.log(collegeId.name);
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/admin/deleteCollege",
+        "https://backend-tc-24.vercel.app/api/admin/deleteCollege",
         {
           college_id: collegeId.id,
           userType: "admin",
@@ -158,7 +158,7 @@ function CollegesTable() {
     console.log(collegeName, about, address);
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/admin/editCollege",
+        "https://backend-tc-24.vercel.app/api/admin/editCollege",
         {
           id: editCollege.id,
           name: collegeName,
@@ -213,11 +213,11 @@ function CollegesTable() {
       <div className=" mt-5 rounded">
         <Paper sx={{ width: "100%" }}>
           <TableContainer sx={{
-              maxWidth: "100%",
-              maxHeight: "500px",
-              overflowX: "auto",
-              overflowY: "auto",
-            }}>
+            maxWidth: "100%",
+            maxHeight: "500px",
+            overflowX: "auto",
+            overflowY: "auto",
+          }}>
             <Table stickyHeader>
               <TableHead>
                 <TableRow>

@@ -12,7 +12,7 @@ function PocDashboard() {
   const getAllCounts = async () => {
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/poc/pocDashboardDetails",
+        "https://backend-tc-24.vercel.app/api/poc/pocDashboardDetails",
         {
           poc_id: userDetails._id,
           college_id: userDetails.College,

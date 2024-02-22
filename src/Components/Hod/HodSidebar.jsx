@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { RxDashboard } from "react-icons/rx";
 import themeHook from "../Context";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiUserCheck } from "react-icons/fi";
 import { LuSchool2 } from "react-icons/lu";
 import { GoProject } from "react-icons/go";
@@ -10,7 +10,7 @@ import toast from "react-hot-toast";
 import Cookies from "js-cookie";
 
 function HodSidebar({ data }) {
-  const { sidebarvalue, setsidebarvalue, userDetails,setUserDetails,token,setToken } = themeHook();
+  const { sidebarvalue, setsidebarvalue, userDetails, setUserDetails, token, setToken } = themeHook();
   const [sidebarValue2, setSidebarValue2] = useState("Dashboard");
   const navigate = useNavigate();
   const handleItemClick = (e) => {
@@ -27,16 +27,15 @@ function HodSidebar({ data }) {
       setToken("")
     }
     toast.success("Logout Successfully");
-    navigate("/") 
-};
+    navigate("/")
+  };
   return (
     <div className=" flex flex-col border w-full p-4 h-full justify-between">
       <ul className="flex flex-col w-full gap-2">
         <Link
           to={"/Hod/Dashboard"}
-          className={` ${
-            sidebarValue2 == "Dashboard" ? " bg-[#f5f5f5] text-textgreen" : ""
-          } hover:bg-[#f5f5f5] cursor-pointer grid grid-cols-[auto_1fr] gap-4 px-4 py-2  font-semibold  rounded-lg`}
+          className={` ${sidebarValue2 == "Dashboard" ? " bg-[#f5f5f5] text-textgreen" : ""
+            } hover:bg-[#f5f5f5] cursor-pointer grid grid-cols-[auto_1fr] gap-4 px-4 py-2  font-semibold  rounded-lg`}
           onClick={handleItemClick}
         >
           <div className=" flex  items-center">
@@ -48,9 +47,8 @@ function HodSidebar({ data }) {
 
         <Link
           to={"/Hod/Projects"}
-          className={` ${
-            sidebarValue2 == "Projects" ? " bg-[#f5f5f5] text-textgreen" : ""
-          } hover:bg-[#f5f5f5] cursor-pointer grid grid-cols-[auto_1fr] gap-4 px-4 py-2  font-semibold  rounded-lg`}
+          className={` ${sidebarValue2 == "Projects" ? " bg-[#f5f5f5] text-textgreen" : ""
+            } hover:bg-[#f5f5f5] cursor-pointer grid grid-cols-[auto_1fr] gap-4 px-4 py-2  font-semibold  rounded-lg`}
           onClick={handleItemClick}
         >
           <div className=" flex  items-center">
@@ -68,7 +66,7 @@ function HodSidebar({ data }) {
             <p className=" font-semibold text-lg">{userDetails?.username}</p>
           </section>
         </section>
-        <button  onClick={handleLogOut} className=" bg-buttongreen bg-opacity-30 w-full text-green-600 px-4 py-[5px] font-semibold rounded-full mt-5">
+        <button onClick={handleLogOut} className=" bg-buttongreen bg-opacity-30 w-full text-green-600 px-4 py-[5px] font-semibold rounded-full mt-5">
           logout
         </button>
       </div>

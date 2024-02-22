@@ -58,7 +58,7 @@ function DepartmentDetails() {
     setLoading(true);
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/dpt/getAllDpt",
+        "https://backend-tc-24.vercel.app/api/dpt/getAllDpt",
         {
           page: page,
           rows: rowsPerPage,
@@ -78,7 +78,7 @@ function DepartmentDetails() {
     console.log(Name, About, token);
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/poc/addDepartmentPoc",
+        "https://backend-tc-24.vercel.app/api/poc/addDepartmentPoc",
         {
           name: Name,
           about: About,
@@ -106,7 +106,7 @@ function DepartmentDetails() {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/poc/searchDepartment`, {
+        `https://backend-tc-24.vercel.app/api/poc/searchDepartment`, {
         college: userDetails.College,
         search: search
       }
@@ -133,7 +133,7 @@ function DepartmentDetails() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/poc/deleteDPT",
+        "https://backend-tc-24.vercel.app/api/poc/deleteDPT",
         {
           dpt_id: DeleteDept.id,
           userType: "poc",
@@ -174,7 +174,7 @@ function DepartmentDetails() {
 
     try {
       const result = await axios.post(
-        "http://localhost:8000/api/poc/editDepartmentPoc",
+        "https://backend-tc-24.vercel.app/api/poc/editDepartmentPoc",
         {
           id: EditDept.id,
           name: Name,
@@ -201,7 +201,7 @@ function DepartmentDetails() {
   const getAllColleges = async () => {
     try {
       const result = await axios.get(
-        "http://localhost:8000/api/college/getAllColleges"
+        "https://backend-tc-24.vercel.app/api/college/getAllColleges"
       );
       console.log(result.data.data);
       setCollegeList(result.data.data.data);

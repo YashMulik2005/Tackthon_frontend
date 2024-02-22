@@ -13,20 +13,20 @@ function OneCollege() {
     console.log(id);
 
     const getdata = async () => {
-        const res = await axios.post("http://localhost:8000/api/college/onecollge", { college: id });
+        const res = await axios.post("https://backend-tc-24.vercel.app/api/college/onecollge", { college: id });
         //console.log(res.data.data);
         setcollegedata(res.data.data)
     }
 
 
     const getdptdata = async () => {
-        const data = await axios.post("http://localhost:8000/api/auth/getDepartment", { college_id: id, })
+        const data = await axios.post("https://backend-tc-24.vercel.app/api/auth/getDepartment", { college_id: id, })
         console.log(data.data.data.data);
         setdpt(data.data.data.data);
     }
 
     const getprojectdata = async () => {
-        const data = await axios.post("http://localhost:8000/api/project/getAllProjectsByCollege", { college_id: id, })
+        const data = await axios.post("https://backend-tc-24.vercel.app/api/project/getAllProjectsByCollege", { college_id: id, })
         console.log(data.data.data.data);
         setproject(data.data.data.data);
     }
