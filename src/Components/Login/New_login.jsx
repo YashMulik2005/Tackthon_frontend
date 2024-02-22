@@ -53,10 +53,10 @@ function New_login() {
 
   return (
     <div className=" flex flex-col md:flex-row h-screen">
-      <div className="md:w-[50%] w-[100%] flex justify-center items-center">
-        <img src={photo} alt="Login" />
+      <div className="md:w-[50%] h-[40%] md:h-[100%] w-[100%] p-2 flex justify-center items-center">
+        <img src={photo} alt="Login" className=" w-[100%] h-[100%] object-contain" />
       </div>
-      <div className="md:w-[35%] w-[100%] flex flex-col justify-center items-start p-2">
+      <div className="md:w-[35%] w-[100%] h-[60%] md:h-[100%] flex flex-col justify-center items-start p-3 sm:p-2">
         <h1 className=" text-xl ">
           Welcome To<br />
           <span className=" text-textgreen text-3xl font-bold">
@@ -64,7 +64,7 @@ function New_login() {
           </span>
         </h1>
         <form onSubmit={hadlesubmit} className=" w-full flex flex-col gap-3">
-          <label className=" font-semibold ">USERNAME</label>
+          <label className=" font-semibold mt-2">USERNAME</label>
           <input
             type="text"
             className=" border bg-[#f5f5f5] w-[100%] rounded-md px-3  py-[7px] focus:outline-none"
