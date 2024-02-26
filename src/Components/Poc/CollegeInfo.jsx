@@ -98,20 +98,20 @@ function CollegeInfo() {
         </button>
       </div>
 
-      <div className="flex flex-col mt-10 shadow-md w-[60%] p-4 rounded-md">
+      <div className="flex flex-col mt-5 shadow-md w-[60%] p-4 rounded-md bg-white mx-auto">
         {loading && (
           <div className="text-center">
             <CircularProgress />
           </div>
         )}
 
-        <div>
-          <img src={college?.photo} className="rounded-md" />
+        <div className=" p-2">
+          <img src={college?.photo} className="rounded-md border" />
         </div>
         <div className="flex flex-col  ">
-          <h1 className="text-2xl font-bold">{college?.name}</h1>
-          <h1 className="text-gray-400">{college?.about}</h1>
-          <h1>{college?.address}</h1>
+          <h1 className="text-2xl font-semibold">{college?.name}</h1>
+          <h1 className=""><span className=" text-gray-500">About: </span>{college?.about}</h1>
+          <h1><span className=" text-gray-500">Address: </span>{college?.address}</h1>
         </div>
       </div>
       {isModelOpen && (

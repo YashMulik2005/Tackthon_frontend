@@ -69,7 +69,7 @@ function Dashboard() {
         </div>
       </div>
       <div className="grid grid-cols-4 gap-10 mt-5">
-        <div className="border-2 border-gray-300 bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
+        <div className="border bg-white  bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-bold text-darkgreen">
               <CountUp delay={2} end={data?.totalCountCollege} />
@@ -80,7 +80,7 @@ function Dashboard() {
             <LuSchool2 className="text-darkgreen" size={60} />
           </div>
         </div>
-        <div className="border-2 border-gray-300 bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
+        <div className="border bg-white bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-bold text-darkgreen">
               <CountUp delay={2} end={data?.totalCountPoc} />
@@ -91,7 +91,7 @@ function Dashboard() {
             <FiUserCheck className="text-darkgreen" size={60} />
           </div>
         </div>
-        <div className="border-2 border-gray-300 bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
+        <div className="border bg-white bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-bold text-darkgreen">
               <CountUp delay={2} end={data?.totalCountHod} />
@@ -102,7 +102,7 @@ function Dashboard() {
             <LiaUserEditSolid className="text-darkgreen" size={60} />
           </div>
         </div>
-        <div className="border-2 border-gray-300 bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
+        <div className="border bg-white border-gray-300 bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-bold text-darkgreen">
               <CountUp delay={2} end={data?.totalCountStudents} />
@@ -114,7 +114,7 @@ function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row w-full mt-10 border-2">
+      <div className="flex flex-row w-full mt-10 border bg-white">
         {/* <div className="flex flex-col gap-10 w-full">
           <div className="border-2 border-gray-300 bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
             <div className="flex flex-col gap-2">
@@ -142,7 +142,7 @@ function Dashboard() {
             hod={data?.totalCountHod}
           />
           <div>
-            <section className="  mx-10  w-full">
+            <section className="w-[90%] mx-auto">
               <Select
                 options={clg.map((item) => ({
                   value: item._id,

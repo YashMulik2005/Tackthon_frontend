@@ -35,7 +35,7 @@ function PocDashboard() {
         </div>
       </div>
       <div className="grid grid-cols-4 gap-10 mt-5">
-        <div className="border-2 border-gray-300 bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
+        <div className="border bg-white bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-bold text-darkgreen">
               <CountUp delay={2} end={data?.totalDepartments} />
@@ -46,7 +46,7 @@ function PocDashboard() {
             <BsBuildings className="text-darkgreen" size={60} />
           </div>
         </div>
-        <div className="border-2 border-gray-300 bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
+        <div className="border bg-white bg=[#f5f5f5] flex flex-row justify-between items-center p-4 rounded-md ">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-bold text-darkgreen">
               <CountUp delay={2} end={data?.totalHod} />
@@ -58,8 +58,8 @@ function PocDashboard() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-10 mt-10">
-        <div className="border-2 border-gray-300 bg=[#f5f5f5] flex flex-col justify-between items-center p-4 rounded-md">
+      <div className="grid gap-10 mt-10">
+        <div className="border bg-white bg=[#f5f5f5] flex flex-col justify-between items-center p-5 rounded-md">
           <div className="font-semibold text-gray-500">Profile</div>
           <hr className=" border-1 p-1  w-[100%]" />
           <section className=" flex gap-2 justify-center items-center">
@@ -69,9 +69,9 @@ function PocDashboard() {
             <h1 className=" font-semibold text-2xl ">
               {data?.pocData[0]?.username}
             </h1>
-            <h2 className="mt-3">{data?.pocData[0]?.mobileNo}</h2>
-            <h2>{data?.pocData[0]?.email}</h2>
-            <h2 className="font-bold">{data?.pocData[0]?.College.name}</h2>
+            <h2 className="mt-3"><span className=" text-gray-500 font-semibold">Mobile no : </span>{data?.pocData[0]?.mobileNo}</h2>
+            <h2><span className=" text-gray-500 font-semibold">Email : </span>{data?.pocData[0]?.email}</h2>
+            <h2 className="font-semibold"><span className=" text-gray-500 font-semibold">college : </span>{data?.pocData[0]?.College.name}</h2>
           </section>
         </div>
       </div>

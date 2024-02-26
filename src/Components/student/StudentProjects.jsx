@@ -143,9 +143,9 @@ function StudentProjects() {
 
       {isModelOpen && (
         <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-gray-600 bg-opacity-60 backdrop-filter backdrop-blur-lg">
-          <div className="relative  my-6 mx-auto w-[50%]">
+          <div className="relative w-[90%] md:w-[50%]">
             {/*content*/}
-            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none overflow-y-auto h-[500px] m-5">
+            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none overflow-y-auto h-[500px]">
               {/*header*/}
               <div className="flex items-center justify-between p-3 border-b border-solid border-slate-200 rounded-t bg-white sticky top-0 ">
                 <h3 className="text-xl font-semibold text-[#757575]">
